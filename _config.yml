@@ -1,0 +1,12 @@
+# Site settings
+title: Introduction to Bioinformatics
+email: huddlej@gmail.com
+description: >
+  Slides and resources for bioinformatics workshop at Western Washington
+  University (WWU) in April 2016.
+baseurl: "/workshop-wwu-2016"
+twitter_username: huddlej
+github_username:  huddlej
+
+# Build settings
+markdown: kramdown
