@@ -206,7 +206,31 @@
 				</section>
 
 				<section>
-					<h2>Variant calling</h2>
+					<h2>Converting from SAM to BAM</h2>
+
+                    <p>Most tools require sorted, indexed BAMs</p>
+                    <p class="fragment">
+                        <code>samtools sort</code><br />
+                        <span class="fragment"><code>samtools index</code><br /></span>
+                    </p>
+
+                    <ul class="fragment">
+                        <li>How big is the BAM file and its index?</li>
+                        <li>How can you view the aligments in the BAM file?</li>
+                    </ul>
+				</section>
+
+				<section>
+					<h2>Visualizing alignments</h2>
+
+                    <p>What do alignments look like?</p>
+                    <p class="fragment"><code>samtools tview</code></p>
+                    <p class="fragment">What can we learn from visualizing alignments like this?</p>
+				</section>
+
+				<section>
+					<h2>Identifying variants in alignments</h2>
+
                     <ul>
                     </ul>
 				</section>
