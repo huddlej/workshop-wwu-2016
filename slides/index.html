@@ -167,11 +167,13 @@
 					<h2>Sequence alignment</h2>
                     <ul>
                         <li>Why would we align our sequences to a "reference" genome?</li>
+                        <li class="fragment">What does a reference look like?</li>
                         <li class="fragment">How do we align sequences to a reference?</li>
                     </ul>
 
                     <p class="fragment">
-                        <code>bwa</code><br />
+                        <code>samtools faidx</code><br />
+                        <span class="fragment"><code>bwa</code><br /></span>
                         <span class="fragment"><code>bwa index</code><br /></span>
                         <span class="fragment"><code>bwa mem</code></span>
                     </p>
@@ -216,8 +218,20 @@
 
                     <ul class="fragment">
                         <li>How big is the BAM file and its index?</li>
-                        <li>How can you view the aligments in the BAM file?</li>
+                        <li>How can you view the alignments in the BAM file?</li>
                     </ul>
+				</section>
+
+				<section>
+					<h2>Summarizing alignments</h2>
+
+                    <p>How do we assess the quality of alignments?</p>
+                    <p class="fragment">
+                        <code>samtools idxstats</code><br />
+                        <span class="fragment"><code>samtools flagstat</code><br /></span>
+                        <span class="fragment"><code>samtools stats</code><br /></span>
+                        <span class="fragment"><code>plot-bamstats</code><br /></span>
+                    </p>
 				</section>
 
 				<section>
@@ -229,9 +243,104 @@
 				</section>
 
 				<section>
-					<h2>Identifying variants in alignments</h2>
+					<h2>Calling variants</h2>
 
                     <ul>
+                        <li>How would you design a tool to call SNVs and indels?</li>
+                        <li class="fragment">What are the constraints on size and content of SNVs?</li>
+                        <li class="fragment">What are the constraints on the size of indels?</li>
+                    </ul>
+
+                    <p class="fragment">
+                        <code>freebayes</code><br />
+                        <span class="fragment"><code>bgzip</code><br /></span>
+                        <span class="fragment"><code>tabix</code><br /></span>
+                    </p>
+				</section>
+
+				<section>
+					<h2>Inspecting variants</h2>
+                    <ul>
+                        <li>How long did variant calling take?</li>
+                        <li>How big is the output file?</li>
+                        <li>What type of file is the output?</li>
+                        <li>How many lines are in the file?</li>
+                        <li>How does the file appear to be organized?</li>
+                    </ul>
+				</section>
+
+				<section>
+					<h2>Interpreting VCF files</h2>
+
+                    <ul>
+                        <li>First, let's review the VCF specification</li>
+                        <li class="fragment">What biological patterns do you observe in the VCF?</li>
+                        <li class="fragment">Can you find the two artificial mutations introduced into the reference?</li>
+                        <li class="fragment">How do you interpret the SNVs and indels we didn't introduce?</li>
+                        <li class="fragment">How do these results affect your interpretation of initial variant caller output?</li>
+                        <li class="fragment">How could we establish a baseline "truth" for variant calls?</li>
+                    </ul>
+				</section>
+
+				<section>
+					<h2>Summarizing variants</h2>
+
+                    <p>How do we assess the quality of variants?</p>
+                    <p class="fragment">
+                        <code>bcftools stats</code><br />
+                        <code>vcfstats</code>
+                    </p>
+				</section>
+
+				<section>
+					<h2>Working with VCF files</h2>
+
+                    <ul>
+                        <li>Simplify the INFO field to just the allele count (AC), read depth (DP), and variant type (TYPE) fields.</li>
+                        <li class="fragment">Find all indels with quality >200.</li>
+                        <li class="fragment">Find all variants with a homozygous alternate genotype (i.e., "1/1").</li>
+                        <li class="fragment">Combine the previous three filters in one command and output a table.</li>
+                        <li class="fragment">What patterns do you notice in the final filtered results?</li>
+                    </ul>
+
+                    <p class="fragment">
+                        <code>vcfkeepinfo</code><br />
+                        <span class="fragment"><code>bcftools filter</code><br /></span>
+                        <span class="fragment"><code>vcf2tsv</code><br /></span>
+                    </p>
+				</section>
+
+				<section>
+					<h2>Exploring more VCF tools</h2>
+
+                    <ul>
+                        <li>bcftools</li>
+                        <li>vcflib</li>
+                        <li>SnpSift</li>
+                        <li>Many more...</li>
+                    </ul>
+				</section>
+
+				<section>
+					<h2>Wrapping up</h2>
+
+                    <p>After three hours, you now know how to:</p>
+                    <ul>
+                        <li>Identify genomic variants from sequence data</li>
+                        <li class="fragment">Interpret and evaluate the quality of genomic data</li>
+                        <li class="fragment">Apply tools that rely on standard genomic formats</li>
+                    </ul>
+
+                    <p class="fragment">But this is just the beginning...</p>
+				</section>
+
+				<section>
+					<h2>Plan to expand your skills</h2>
+
+                    <ul>
+                        <li>Skim the tools listed under the website's "Continuing education" section.</li>
+                        <li>Take 5 minutes to brainstorm how you can apply these tools to your own research questions.</li>
+                        <li>Reflect on who you know with expertise in each subject area.</li>
                     </ul>
 				</section>
 			</div>
