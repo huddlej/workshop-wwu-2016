@@ -103,12 +103,24 @@
 				</section>
 
 				<section>
-					<h2>Login to Amazon workstation</h2>
+                    <section>
+                        <h2>Login to Amazon workstation</h2>
 
-                    <p>Open a terminal and run the following command:</p>
-                    <p><small><code>ssh -i key-pair.pem participantN@ip.address</code></small></p>
-                    <p>Change to your working directory:</p>
-                    <p><small><code>cd analysis/</code></small></p>
+                        <p>Open Putty and enter username@ip.address</p>
+                        <p><img src="images/putty-session-config.png" /></p>
+                    </section>
+                    <section>
+                        <h2>Login to Amazon workstation</h2>
+
+                        <p>Select "SSH", then "Auth", enter the path to your key file, and click "Open".</p>
+                        <p><img src="images/putty-auth-config.png" /></p>
+                    </section>
+                    <section>
+                        <h2>Login to Amazon workstation</h2>
+
+                        <p>Change to your working directory:</p>
+                        <p><small><code>cd analysis/</code></small></p>
+                    </section>
 				</section>
 
 				<section>
@@ -122,12 +134,25 @@
 				</section>
 
 				<section>
-					<h2>How do sequences originate?</h2>
-                    <p>
-                      <img src="images/Kircher_et_al_2011_Illumina_sequencing.jpg" width="60%" height="60%" /><br />
-                      <small>Kircher et al. 2011</small>
-                    </p>
-                    <p><small>(<a target="_new" href="http://www.illumina.com/content/dam/illumina-marketing/documents/applications/ngs-library-prep/ForAllYouSeqMethods.pdf">Bonus poster</a> if you really want your minds blown)</small></p>
+                    <section>
+    					<h2>How do sequences originate?</h2>
+                        <p><img src="images/shotgun_sequencing_human_genome.jpg" /><br /><small>International Human Genome Sequencing Consortium (2001)</small></p>
+                    </section>
+                    <section>
+                        <h2>Whole genome sequencing with short reads</h2>
+                        <p>
+                          <img src="images/Kircher_et_al_2011_Illumina_sequencing.jpg" width="60%" height="60%" /><br />
+                          <small>Kircher et al. 2011</small>
+                        </p>
+                        <p><small>(<a target="_new" href="http://www.illumina.com/content/dam/illumina-marketing/documents/applications/ngs-library-prep/ForAllYouSeqMethods.pdf">Bonus poster</a> if you really want your minds blown)</small></p>
+                    </section>
+                    <section>
+                        <h2>Whole genome sequencing with long reads</h2>
+                        <p>
+                          <img src="images/contiguity_of_gorilla_assembly_with_long_reads.jpg" width="50%" height="50%" /><br />
+                          <small>Gordon et al. 2016</small>
+                        </p>
+                    </section>
 				</section>
 
 				<section>
@@ -150,6 +175,25 @@
                         <li>Assess for quality</li>
                         <li>Align to a reference assembly and call variants</li>
                     </ul>
+				</section>
+
+				<section>
+					<h2>Getting help</h2>
+
+                    <ul>
+                        <li>man &lt;command&gt;</li>
+                        <li>&lt;command&gt;</li>
+                        <li>&lt;command&gt; -h</li>
+                        <li>&lt;command&gt; --help</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Documenting your analysis</h2>
+
+                    <p>Document all the commands you run in your favorite text
+                    editor, email client, Google docs, Evernote, Twitter,
+                    etc.</p>
 				</section>
 
 				<section>
@@ -297,10 +341,10 @@
 
                     <ul>
                         <li>Simplify the INFO field to just the allele count (AC), read depth (DP), and variant type (TYPE) fields.</li>
-                        <li class="fragment">Find all indels with quality >200.</li>
+                        <li class="fragment">Find all calls with quality >200.</li>
+                        <li class="fragment">Find all indels.</li>
                         <li class="fragment">Find all variants with a homozygous alternate genotype (i.e., "1/1").</li>
-                        <li class="fragment">Combine the previous three filters in one command and output a table.</li>
-                        <li class="fragment">What patterns do you notice in the final filtered results?</li>
+                        <li class="fragment">What patterns do you notice when you combine all three filters into a table?</li>
                     </ul>
 
                     <p class="fragment">
@@ -340,7 +384,7 @@
                     <ul>
                         <li>Skim the tools listed under the website's "Continuing education" section.</li>
                         <li>Take 5 minutes to brainstorm how you can apply these tools to your own research questions.</li>
-                        <li>Reflect on who you know with expertise in each subject area.</li>
+                        <li class="fragment">Reflect on who you know with expertise in each subject area.</li>
                     </ul>
 				</section>
 
