@@ -5,6 +5,7 @@ layout: default
 ## Resources for the workshop
 
   * [Slides](slides/index.html)
+  * [Servers](servers.html)
   * File format specifications
     * [High-throughput sequencing (HTS) specifications](http://samtools.github.io/hts-specs/)
     * [Common genomic annotation formats](http://genome.ucsc.edu/FAQ/FAQformat.html)
