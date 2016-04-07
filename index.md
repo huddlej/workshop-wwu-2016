@@ -29,6 +29,7 @@ layout: default
   * [freebayes](https://github.com/ekg/freebayes) - Bayesian SNV and small indel caller
   * [vcflib](https://github.com/vcflib/vcflib) - VCF analysis toolkit from the author of freebayes
   * [bcftools](https://samtools.github.io/bcftools/) - VCF analysis toolkit from the authors of samtools
+  * [Viewing variants in UCSC Genome Browser](ucsc_browser.html)
 
 ## Continuing education
 
